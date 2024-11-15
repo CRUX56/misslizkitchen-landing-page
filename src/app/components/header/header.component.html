@@ -3,9 +3,12 @@
     <div class="flex-row header">
       <div class="col-12">
         <nav>
-          <a class="button" routerLink="/home" routerLinkActive="active"
-            >Home</a
-          >
+          <a
+            class="button"
+            (click)="scrollToSection('hero')"
+            routerLinkActive="active"
+            >Home
+          </a>
           <a
             class="button"
             (click)="scrollToSection('about')"
@@ -18,17 +21,29 @@
             routerLinkActive="active"
             >Certifications</a
           >
-          <a class="button" routerLink="/menu" routerLinkActive="active"
+          <a
+            class="button"
+            (click)="scrollToSection('menu')"
+            routerLinkActive="active"
             >Menu</a
           >
           <a
             class="button"
-            routerLink="/app-coming-soon"
+            (click)="scrollToSection('food-truck-app')"
             routerLinkActive="active"
             >App Coming Soon</a
           >
-          <a class="button" routerLink="/testimonials" routerLinkActive="active"
+          <a
+            class="button"
+            (click)="scrollToSection('testimonials')"
+            routerLinkActive="active"
             >testimonials</a
+          >
+          <a
+            class="button"
+            (click)="scrollToSection('contact-us')"
+            routerLinkActive="active"
+            >Contact Us</a
           >
         </nav>
       </div>
