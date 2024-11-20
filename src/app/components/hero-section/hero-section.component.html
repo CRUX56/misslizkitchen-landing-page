@@ -1,6 +1,45 @@
 <section id="hero">
-  <div class="container">
+  <div class="container full-width">
     <div class="flex-row">
+      <div class="slider-container">
+        <mat-card
+          *ngFor="let slide of slides; let i = index"
+          class="slide"
+          [class.active]="i === currentIndex"
+        >
+          <div
+            class="slide-content"
+            [style.backgroundImage]="'url(' + slide.image + ')'"
+          >
+            <div class="overlay">
+              <div class="text-content">
+                <h1>{{ slide.title }}</h1>
+                <p>{{ slide.description }}</p>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="slide.buttonAction()"
+                >
+                  {{ slide.buttonText }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+
+        <div class="controls">
+          <button mat-icon-button (click)="prevSlide(); resetSlideTimer()">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+          <button mat-icon-button (click)="nextSlide(); resetSlideTimer()">
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--
       <div class="col-6">
         <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
         <h3>
@@ -11,7 +50,4 @@
           <button>Call Us to Learn More</button>
         </a>
       </div>
-      <div class="col-6"></div>
-    </div>
-  </div>
-</section>
+      <div class="col-6"></div>-->

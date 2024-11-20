@@ -1,12 +1,81 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule],
   templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.css'
+  styleUrl: './hero-section.component.css',
 })
-export class HeroSectionComponent {
+export class HeroSectionComponent implements AfterViewInit, OnDestroy {
+  slides = [
+    {
+      image: 'https//via.placeholder.com/1920x1080',
+      title: 'Slide 1 Title',
+      description: 'This is the description for Slide 1.',
+      buttonText: 'Learn More',
+      buttonAction: () => alert('Slide 1 Buutton clicked'),
+    },
+    {
+      image: 'https://via.placeholder.com/1920x1080/ff0000',
+      title: 'Slide 2 Title',
+      description: 'This is the description for Slide 2.',
+      buttonText: 'Read More',
+      buttonAction: () => alert('Slide 2 Button Clicked!'),
+    },
+    {
+      image: 'https://via.placeholder.com/1920x1080/00ff00',
+      title: 'Slide 3 Title',
+      description: 'This is the description for Slide 3.',
+      buttonText: 'Get Started',
+      buttonAction: () => alert('Slide 3 Button Clicked!'),
+    },
+  ];
 
+  currentIndex = 0;
+  slideInterval: any;
+
+  constructor() {}
+
+  ngAfterViewInit() {
+    console.log('HeroSliderComponent initialized');
+    this.startSlideTimer();
+  }
+
+  ngOnDestroy(): void {
+    console.log('HeroSliderComponent destroyed');
+    this.clearSlideTimer();
+  }
+
+  startSlideTimer() {
+    console.log('Starting slide timer');
+    this.slideInterval = setInterval(() => {
+      console.log('Moving to next slide');
+      this.nextSlide();
+    }, 5000); // Change every 5 seconds
+  }
+
+  clearSlideTimer() {
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
+  }
+
+  nextSlide() {
+    this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+  }
+
+  prevSlide() {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+  }
+
+  resetSlideTimer() {
+    this.clearSlideTimer();
+    this.startSlideTimer();
+  }
 }
