@@ -5,36 +5,49 @@
         <div class="col-6"></div>
         <div class="col-6">
           <nav>
-            <a class="footer-link" routerLink="/home" routerLinkActive="active"
+            <a
+              class="footer-link"
+              (click)="scrollToSection('hero')"
+              routerLinkActive="active"
               >Home</a
             >
             <a
               class="footer-link"
-              routerLink="/about-miss-lizzs-kitchen"
+              (click)="scrollToSection('about')"
               routerLinkActive="active"
               >About</a
             >
             <a
               class="footer-link"
-              routerLink="/certifications"
+              (click)="scrollToSection('certifications')"
               routerLinkActive="active"
               >Certifications</a
             >
-            <a class="footer-link" routerLink="/menu" routerLinkActive="active"
+            <a
+              class="footer-link"
+              (click)="scrollToSection('menu')"
+              routerLinkActive="active"
               >Menu</a
             >
             <a
               class="footer-link"
-              routerLink="/app-coming-soon"
+              (click)="scrollToSection('food-truck-app')"
               routerLinkActive="active"
               >App Coming Soon</a
             >
             <a
               class="footer-link"
-              routerLink="/testimonials"
+              (click)="scrollToSection('testimonials')"
               routerLinkActive="active"
               >Testimonials</a
             >
+            <a
+              class="footer-link"
+              (click)="scrollToSection('contact-us')"
+              routerLinkActive="active"
+            >
+              Contact Us
+            </a>
           </nav>
         </div>
       </section>
