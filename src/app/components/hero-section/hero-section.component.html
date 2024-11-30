@@ -1,16 +1,14 @@
 <section id="hero">
   <div class="container full-width">
     <div class="flex-row">
-      <div class="slider-container">
+      <div class="slider-container" *ngIf="appReadyService.isAppReady()">
         <mat-card
           *ngFor="let slide of slides; let i = index"
           class="slide"
-          [class.active]="i === currentIndex"
+          [class.active]="isSlideActive(i)"
+          [style.backgroundImage]="'url(' + slide.image + ')'"
         >
-          <div
-            class="slide-content"
-            [style.backgroundImage]="'url(' + slide.image + ')'"
-          >
+          <div class="slide-content">
             <div class="overlay">
               <div class="text-content">
                 <h1>{{ slide.title }}</h1>

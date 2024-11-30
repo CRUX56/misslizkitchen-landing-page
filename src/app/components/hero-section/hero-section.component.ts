@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { AppReadyService } from '../../services/app-ready.service';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -39,11 +40,13 @@ export class HeroSectionComponent implements AfterViewInit, OnDestroy {
   currentIndex = 0;
   slideInterval: any;
 
-  constructor() {}
+  constructor(public appReadyService: AppReadyService) {}
 
   ngAfterViewInit() {
-    console.log('HeroSliderComponent initialized');
-    this.startSlideTimer();
+    if (this.appReadyService.isAppReady()) {
+      console.log('HeroSliderComponent initialized');
+      this.startSlideTimer();
+    }
   }
 
   ngOnDestroy(): void {
@@ -72,6 +75,10 @@ export class HeroSectionComponent implements AfterViewInit, OnDestroy {
   prevSlide() {
     this.currentIndex =
       (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+  }
+
+  isSlideActive(index: number): boolean {
+    return this.currentIndex === index;
   }
 
   resetSlideTimer() {
