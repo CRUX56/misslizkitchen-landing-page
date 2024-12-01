@@ -44,20 +44,16 @@ export class HeroSectionComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     if (this.appReadyService.isAppReady()) {
-      console.log('HeroSliderComponent initialized');
       this.startSlideTimer();
     }
   }
 
   ngOnDestroy(): void {
-    console.log('HeroSliderComponent destroyed');
     this.clearSlideTimer();
   }
 
   startSlideTimer() {
-    console.log('Starting slide timer');
     this.slideInterval = setInterval(() => {
-      console.log('Moving to next slide');
       this.nextSlide();
     }, 5000); // Change every 5 seconds
   }
