@@ -1,75 +1,75 @@
 .testimonials-carousel {
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .carousel-container {
-  display: flex;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.testimonial-slide {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  transition: left 0.8s ease-in-out, opacity 0.8s ease-in-out;
-  opacity: 0;
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px;
+  scrollbar-width: none; /* Hide scrollbar for modern browsers */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers */
+}
+
+.testimonial-card {
+  flex: 0 0 calc(25% - 16px); /* Each card takes up 25% of the container minus the gap */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   box-sizing: border-box;
-}
-
-.testimonial-slide.active {
-  left: 0;
-  opacity: 1;
-  z-index: 1;
-}
-
-.testimonial-content {
+  background-color: white;
   text-align: center;
+  border-radius: 8px;
 }
 
-.testimonial-content img {
+.testimonial-card img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
-.testimonial-content h3 {
+.testimonial-card h3 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
-.testimonial-content p {
-  font-size: 1rem;
+.testimonial-card p {
+  font-size: 0.9rem;
   color: #555;
 }
 
-.controls {
+.scroll-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.controls button {
   background: rgba(0, 0, 0, 0.6);
   color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
+  z-index: 10;
 }
 
-.controls button:hover {
+.scroll-button.left {
+  left: -20px;
+}
+
+.scroll-button.right {
+  right: -20px;
+}
+
+.scroll-button:hover {
   background: rgba(0, 0, 0, 0.8);
 }

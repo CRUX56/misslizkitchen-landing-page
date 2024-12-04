@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { AppReadyService } from '../../services/app-ready.service';
+import { AppReadyService, TestimonialsService } from '../../services';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,31 +13,18 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './testimonials.component.css',
 })
 export class TestimonialsComponent implements AfterViewInit, OnDestroy {
-  testimonials = [
-    {
-      name: 'John Doe',
-      image: 'https://via.placeholder.com/150',
-      testimonial: 'The food here is fantastic! It completly changed my life!',
-    },
-    {
-      name: 'Jane Smith',
-      image: 'https://via.placeholder.com/150/ff0000',
-      testimonial: 'Amazing service and excellent customer support!',
-    },
-    {
-      name: 'Sam Wilson',
-      image: 'https://via.placeholder.com/150/00ff00',
-      testimonial: 'Highly recommend this to everyone. Five stars!',
-    },
-  ];
-
   currentIndex: number = 0;
   slideInterval: any;
+  testimonials: any;
 
-  constructor(public appReadyService: AppReadyService) {}
+  constructor(
+    public appReadyService: AppReadyService,
+    private testimonialsService: TestimonialsService
+  ) {}
 
   ngAfterViewInit(): void {
     if (this.appReadyService.isAppReady()) {
+      this.testimonials = this.testimonialsService.getTestimonialsData();
       this.startSlideTimer();
     }
   }
@@ -66,6 +53,14 @@ export class TestimonialsComponent implements AfterViewInit, OnDestroy {
     this.currentIndex =
       (this.currentIndex - 1 + this.testimonials.length) %
       this.testimonials.length;
+  }
+
+  scrollLeft(container: HTMLElement) {
+    container.scrollBy({ left: -300, behavior: 'smooth' });
+  }
+
+  scrollRight(container: HTMLElement) {
+    container.scrollBy({ left: 300, behavior: 'smooth' });
   }
 
   isActive(index: number): boolean {

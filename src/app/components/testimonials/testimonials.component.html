@@ -8,6 +8,38 @@
     <div class="flex-row">
       <section class="testimonials-carousel">
         <div class="carousel-container">
+          <button
+            mat-icon-button
+            class="scroll-button left"
+            (click)="scrollLeft(carousel)"
+          >
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+          <div class="carousel" #carousel>
+            <mat-card
+              *ngFor="let testimonial of testimonials"
+              class="testimonial-card"
+            >
+              <div class="testimonial-content">
+                <img [src]="testimonial.image" alt="{{ testimonial.name }}" />
+                <h3>{{ testimonial.name }}</h3>
+                <p>{{ testimonial.testimonial }}</p>
+              </div>
+            </mat-card>
+          </div>
+
+          <button
+            mat-icon-button
+            class="scroll-button right"
+            (click)="scrollRight(carousel)"
+          >
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </section>
+      <!--
+      <section class="testimonials-carousel">
+        <div class="carousel-container">
           <mat-card
             *ngFor="let testimonial of testimonials; let i = index"
             class="testimonial-slide"
@@ -29,7 +61,7 @@
             </button>
           </div>
         </div>
-      </section>
+      </section>-->
     </div>
   </div>
 </section>
