@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { NgFor } from '@angular/common';
 import { MenuService } from '../../services';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css',
 })

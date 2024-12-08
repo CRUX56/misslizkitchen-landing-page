@@ -7,55 +7,12 @@
       </div>
     </div>
     <div class="flex-row featured-dish">
-      <div class="menu-item col-4">
-        <img src="" alt="" />
-        <h3>Featured Dish 1</h3>
-        <p>
-          Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum
-          sit.
-        </p>
-      </div>
-      <div class="menu-item col-4">
-        <img src="" alt="" />
-        <h3>Featured Dish 1</h3>
-        <p>
-          Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum
-          sit.
-        </p>
-      </div>
-      <div class="menu-item col-4">
-        <img src="" alt="" />
-        <h3>Featured Dish 1</h3>
-        <p>
-          Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum
-          sit.
-        </p>
-      </div>
-    </div>
-    <div class="flex-row">
-      <div class="menu-item col-4">
-        <img src="" alt="" />
-        <h3>Featured Dish 1</h3>
-        <p>
-          Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum
-          sit.
-        </p>
-      </div>
-      <div class="menu-item col-4">
-        <img src="" alt="" />
-        <h3>Featured Dish 1</h3>
-        <p>
-          Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum
-          sit.
-        </p>
-      </div>
-      <div class="menu-item col-4">
-        <img src="" alt="" />
-        <h3>Featured Dish 1</h3>
-        <p>
-          Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum
-          sit.
-        </p>
+      <div class="col-3 menu-item" *ngFor="let item of menuItems">
+        <div class="menu-item-container">
+          <img [src]="item.menuItemPic" alt="" />
+          <h4>{{ item.menuItem }}</h4>
+          <p>{{ item.dishDescription }}</p>
+        </div>
       </div>
     </div>
   </div>
