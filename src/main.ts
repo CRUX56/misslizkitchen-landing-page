@@ -4,6 +4,10 @@ import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 import { AppReadyService } from './app/services/app-ready.service';
 import { APP_INITIALIZER } from '@angular/core';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { importProvidersFrom } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function appInitializerFactory(appReadyService: AppReadyService) {
   return () => {
@@ -29,5 +33,7 @@ bootstrapApplication(AppComponent, {
       deps: [AppReadyService],
       multi: true,
     },
+    provideHttpClient(withFetch()),
+    importProvidersFrom(MatSnackBarModule, BrowserAnimationsModule),
   ],
 }).catch((err) => console.error(err));
