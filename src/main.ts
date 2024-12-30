@@ -12,7 +12,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export function appInitializerFactory(appReadyService: AppReadyService) {
   return () => {
     return new Promise<void>((resolve) => {
-      // Simulate any setup logic before marking the app as ready
       setTimeout(() => {
         appReadyService.markAsReady();
         resolve();
@@ -21,19 +20,17 @@ export function appInitializerFactory(appReadyService: AppReadyService) {
   };
 }
 
-/*bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));*/
 bootstrapApplication(AppComponent, {
   ...appConfig,
   providers: [
-    ...appConfig.providers,
+    provideHttpClient(withFetch()), // Ensure HttpClient is globally available
+    importProvidersFrom(MatSnackBarModule, BrowserAnimationsModule),
+    ...appConfig.providers, // Include other app-specific providers
     {
       provide: APP_INITIALIZER,
       useFactory: appInitializerFactory,
       deps: [AppReadyService],
       multi: true,
     },
-    provideHttpClient(withFetch()),
-    importProvidersFrom(MatSnackBarModule, BrowserAnimationsModule),
   ],
 }).catch((err) => console.error(err));

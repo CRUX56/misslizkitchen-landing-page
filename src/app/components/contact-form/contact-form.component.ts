@@ -9,8 +9,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { HttpClientModule } from '@angular/common/http';
 import { ContactFormService } from '../../services/contact-form.service';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-form',
@@ -21,7 +22,10 @@ import { ContactFormService } from '../../services/contact-form.service';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-    HttpClientModule, // Required for HttpClient
+    HttpClientModule,
+  ],
+  providers: [
+    ContactFormService, // Service dependency
   ],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css'],
