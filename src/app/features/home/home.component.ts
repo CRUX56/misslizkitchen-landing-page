@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
+import { MenuComponent } from '../../features';
 import {
   AboutComponent,
   CertificationsComponent,
   FoodTruckAppComponent,
-  MenuComponent,
-} from '../../features';
-import {
   HeaderComponent,
   HeroSectionComponent,
   TestimonialsComponent,

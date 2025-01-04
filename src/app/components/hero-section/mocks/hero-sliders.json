@@ -7,17 +7,10 @@
     "buttonAction": "() => alert('Slide 1 Buutton clicked')"
   },
   {
-    "image": "https://via.placeholder.com/1920x1080/ff0000",
+    "image": "/slider-image-2.jpg",
     "title": "Slide 2 Title",
     "description": "This is the description for Slide 2.",
     "buttonText": "Read More",
     "buttonAction": "() => alert('Slide 2 Button Clicked!')"
-  },
-  {
-    "image": "https://via.placeholder.com/1920x1080/00ff00",
-    "title": "Slide 3 Title",
-    "description": "This is the description for Slide 3.",
-    "buttonText": "Get Started",
-    "buttonAction": "() => alert('Slide 3 Button Clicked!')"
   }
 ]

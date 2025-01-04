@@ -1,42 +1,52 @@
 [
   {
-    "menuItemPic": "https://via.placeholder.com/150/ff0000",
-    "menuItem": "Featured Dish 1",
-    "dishDescription": "Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum sit."
+    "menuItemPic": "/bacon-cheese-burger-with-fries.jpg",
+    "menuItem": "Bacon Cheese Burger With Fries",
+    "dishDescription": "$10.00"
   },
   {
-    "menuItemPic": "https://via.placeholder.com/150/ff0000",
-    "menuItem": "Featured Dish 2",
-    "dishDescription": "Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum sit."
+    "menuItemPic": "/carolina-style-hotdogs.jpg",
+    "menuItem": "Carolina Style Hotdogs",
+    "dishDescription": "$8.50"
   },
   {
-    "menuItemPic": "https://via.placeholder.com/150/ff0000",
-    "menuItem": "Featured Dish 3",
-    "dishDescription": "Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum sit."
+    "menuItemPic": "/cheese-burgers-and-french-fries.jpg",
+    "menuItem": "Cheese Burgers and French Fries",
+    "dishDescription": "$8.50"
   },
   {
-    "menuItemPic": "https://via.placeholder.com/150/ff0000",
-    "menuItem": "Featured Dish 4",
-    "dishDescription": "Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum sit."
+    "menuItemPic": "/chicken-philly.jpg",
+    "menuItem": "Chicken Philly With Fries",
+    "dishDescription": "$9.00"
   },
   {
-    "menuItemPic": "https://via.placeholder.com/150/ff0000",
-    "menuItem": "Featured Dish 5",
-    "dishDescription": "Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum sit."
+    "menuItemPic": "/chicken-tender-plate.jpg",
+    "menuItem": "Chicken Tender Plate",
+    "dishDescription": "$9.00"
   },
   {
-    "menuItemPic": "https://via.placeholder.com/150/ff0000",
-    "menuItem": "Featured Dish 6",
-    "dishDescription": "Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum sit."
+    "menuItemPic": "/chicken-wings-and-fries.jpg",
+    "menuItem": "Chicken Wings and Fries",
+    "dishDescription": "5 Wings w/Fries $7.00 7 Wings w/Fries $10.00 10 Wings w/Fries $14.00"
   },
   {
-    "menuItemPic": "https://via.placeholder.com/150/ff0000",
-    "menuItem": "Featured Dish 7",
-    "dishDescription": "Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum sit."
+    "menuItemPic": "/french-fries.jpg",
+    "menuItem": "French Fries",
+    "dishDescription": "$3.00"
   },
   {
-    "menuItemPic": "https://via.placeholder.com/150/ff0000",
-    "menuItem": "Featured Dish 8",
-    "dishDescription": "Eu mea audiam equidem, has ad dolore officiis. No zril solet minimum sit."
+    "menuItemPic": "/grilled-cheese.jpg",
+    "menuItem": "Grilled Cheese",
+    "dishDescription": "$7.00"
+  },
+  {
+    "menuItemPic": "/onion-rings.jpg",
+    "menuItem": "Onion Rings",
+    "dishDescription": "$7.00"
+  },
+  {
+    "menuItemPic": "/wings.jpg",
+    "menuItem": "Wings",
+    "dishDescription": "Buffalo, Garlic Parmesan, Sweet Heat Teriyaki, Lemon Pepper, and Jerk"
   }
 ]
