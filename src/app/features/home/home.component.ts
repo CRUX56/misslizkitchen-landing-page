@@ -9,7 +9,6 @@ import {
   HeaderComponent,
   HeroSectionComponent,
   TestimonialsComponent,
-  ContactFormComponent,
   FooterComponent,
 } from '../../components';
 
@@ -24,7 +23,6 @@ import {
     MenuComponent,
     FoodTruckAppComponent,
     TestimonialsComponent,
-    ContactFormComponent,
     FooterComponent,
   ],
   templateUrl: './home.component.html',
