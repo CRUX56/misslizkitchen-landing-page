@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
-import { AppReadyService } from '../../services/app-ready.service';
+import { AppReadyService, HeroSliderService } from '../../services';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,6 +13,7 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './hero-section.component.css',
 })
 export class HeroSectionComponent implements AfterViewInit, OnDestroy {
+  /*
   slides = [
     {
       image: 'https//via.placeholder.com/1920x1080',
@@ -35,21 +36,30 @@ export class HeroSectionComponent implements AfterViewInit, OnDestroy {
       buttonText: 'Get Started',
       buttonAction: () => alert('Slide 3 Button Clicked!'),
     },
-  ];
+  ];*/
 
   currentIndex = 0;
   slideInterval: any;
+  slides: any;
 
-  constructor(public appReadyService: AppReadyService) {}
+  constructor(
+    public appReadyService: AppReadyService,
+    public heroSlides: HeroSliderService
+  ) {}
 
   ngAfterViewInit() {
     if (this.appReadyService.isAppReady()) {
+      this.getSlideData();
       this.startSlideTimer();
     }
   }
 
   ngOnDestroy(): void {
     this.clearSlideTimer();
+  }
+
+  getSlideData() {
+    this.slides = this.heroSlides.getHeroSliderData();
   }
 
   startSlideTimer() {
