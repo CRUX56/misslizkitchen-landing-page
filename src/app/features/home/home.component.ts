@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from '../../features';
 import {
+  HeroSectionComponent,
   AboutComponent,
   CertificationsComponent,
   FoodTruckAppComponent,
-  HeaderComponent,
-  HeroSectionComponent,
   TestimonialsComponent,
   FooterComponent,
 } from '../../components';
@@ -14,7 +13,6 @@ import {
   selector: 'app-home',
   standalone: true,
   imports: [
-    HeaderComponent,
     HeroSectionComponent,
     AboutComponent,
     CertificationsComponent,
@@ -24,6 +22,7 @@ import {
     FooterComponent,
   ],
   templateUrl: './home.component.html',
+
   styleUrl: './home.component.css',
 })
 export class HomeComponent {}
