@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --crimson: #8c3231;
   --bloodorange: #b84a3d;
   --orange: #cd7c47;
   --aqua: #4c6260;
   --navy: #24242c;
+  --white: #fff;
   --transparent: rgba(255, 255, 255, 0);
   --transparent-25-percent: rgba(255, 255, 255, 0.25);
+  --font-family: "Poppins", serif;
+  --headerFont: "Anton SC", serif;
 }
 
 body {
@@ -14,6 +19,21 @@ body {
   line-height: 1.44em;
   font-weight: 500;
   color: #24242c;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--headerFont) !important;
+  }
+  p {
+    font-family: var(--font-family) !important;
+    color: var(--navy) !important;
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
 header {
@@ -35,6 +55,7 @@ header {
       display: flex;
       align-items: center;
       max-height: 100%;
+      padding-top: 5px;
       img {
         height: 74px;
         width: auto;
@@ -66,13 +87,40 @@ header {
           align-items: center;
           height: 100%;
           padding: 26px 45px;
-          font-family: "DM Sans", sans-serif;
+          font-family: var(--font-family);
           font-size: 16px;
           line-height: 1.44em;
           font-weight: 500;
           letter-spacing: -0.02em;
+          color: var(--white);
         }
       }
+    }
+  }
+  .crux-header-widget {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      color: var(--white);
+    }
+  }
+}
+
+.slider-container {
+  margin-top: -101px;
+}
+
+footer {
+  background: var(--navy);
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bloodorange);
+    a {
+      color: var(--crimson);
     }
   }
 }
