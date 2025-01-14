@@ -102,3 +102,21 @@ body {
   font-size: 0.75em;
   text-align: right;
 }
+
+/*********************
+Helper Classes
+*********************/
+
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.padding-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}

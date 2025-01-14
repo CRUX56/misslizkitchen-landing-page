@@ -26,6 +26,7 @@ body {
   h5,
   h6 {
     font-family: var(--headerFont) !important;
+    color: var(--crimson);
   }
   p {
     font-family: var(--font-family) !important;
@@ -40,7 +41,7 @@ header {
   position: relative;
   padding: 0;
   vertical-align: top;
-  height: 101px;
+  height: 76px;
   z-index: 100;
   background-color: var(--transparent);
   border-bottom: 1px solid;
@@ -57,7 +58,7 @@ header {
       max-height: 100%;
       padding-top: 5px;
       img {
-        height: 74px;
+        height: 70px;
         width: auto;
       }
     }
@@ -110,6 +111,14 @@ header {
 
 .slider-container {
   margin-top: -101px;
+}
+
+section {
+  padding: 1.5% 1% 1.5% 1%;
+  &#hero,
+  &.footer-content {
+    padding: 0;
+  }
 }
 
 footer {

@@ -1,9 +1,16 @@
 <section id="testimonials">
   <div class="container">
     <div class="flex-row">
-      <div class="col-12">
+      <div class="col-2"></div>
+      <div class="col-8">
         <h1>Testimonials Works!</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas fuga
+          quae consectetur soluta sit. Accusamus nam numquam, rem earum expedita
+          est. Inventore quaerat amet cumque esse soluta magnam id accusamus?
+        </p>
       </div>
+      <div class="col-2"></div>
     </div>
     <div class="flex-row">
       <section class="testimonials-carousel">
@@ -37,31 +44,6 @@
           </button>
         </div>
       </section>
-      <!--
-      <section class="testimonials-carousel">
-        <div class="carousel-container">
-          <mat-card
-            *ngFor="let testimonial of testimonials; let i = index"
-            class="testimonial-slide"
-            [class.active]="isActive(i)"
-          >
-            <div class="testimonial-content">
-              <img [src]="testimonial.image" alt="{{ testimonial.name }}" />
-              <h3>{{ testimonial.name }}</h3>
-              <p>{{ testimonial.testimonial }}</p>
-            </div>
-          </mat-card>
-
-          <div class="controls">
-            <button mat-icon-button (click)="prevSlide(); clearSlideTimer()">
-              <mat-icon>chevron_left</mat-icon>
-            </button>
-            <button mat-icon-button (click)="nextSlide(); clearSlideTimer()">
-              <mat-icon>chevron_right</mat-icon>
-            </button>
-          </div>
-        </div>
-      </section>-->
     </div>
   </div>
 </section>
