@@ -94,6 +94,14 @@ header {
           font-weight: 500;
           letter-spacing: -0.02em;
           color: var(--white);
+          &:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: all transform 0.2s;
+          }
+          &:active {
+            background: rgba(255, 255, 255, 0.25);
+            transform: all transform 0.2s;
+          }
         }
       }
     }
@@ -118,6 +126,9 @@ section {
   &#hero,
   &.footer-content {
     padding: 0;
+  }
+  &#menu {
+    background: #f7f7f7;
   }
 }
 

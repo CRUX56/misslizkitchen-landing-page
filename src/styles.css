@@ -90,6 +90,12 @@ body {
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  width: 1300px;
+  max-width: 1300px;
+  &.full-width {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .header,
