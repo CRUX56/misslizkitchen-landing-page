@@ -7,6 +7,7 @@
   --aqua: #4c6260;
   --navy: #24242c;
   --white: #fff;
+  --off-white: #f7f7f7;
   --transparent: rgba(255, 255, 255, 0);
   --transparent-25-percent: rgba(255, 255, 255, 0.25);
   --font-family: "Poppins", serif;
@@ -18,7 +19,7 @@ body {
   font-size: 18px;
   line-height: 1.44em;
   font-weight: 500;
-  color: #24242c;
+  color: var(--navy);
   h1,
   h2,
   h3,
@@ -107,12 +108,16 @@ header {
     }
   }
   .crux-header-widget {
-    height: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    a {
-      color: var(--white);
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      a {
+        color: var(--white);
+      }
     }
   }
 }
@@ -122,13 +127,30 @@ header {
 }
 
 section {
-  padding: 1.5% 1% 1.5% 1%;
+  padding: 102px 0 120px 0; /*1.5% 1% 1.5% 1%*/
   &#hero,
   &.footer-content {
     padding: 0;
   }
+  &#about {
+    padding: 0;
+    .about-background {
+      width: 100%;
+      height: auto;
+      background-image: url(../../../public/main-image-1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .content {
+      padding: 102px 75px 120px 75px;
+    }
+  }
+  &#certifications,
   &#menu {
-    background: #f7f7f7;
+    background: var(--off-white);
+  }
+  &#food-truck-app {
+    background-image: url(../../../public/food-truck-background.jpg);
   }
 }
 
@@ -138,6 +160,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 15px 0 15px 0;
     color: var(--bloodorange);
     a {
       color: var(--crimson);

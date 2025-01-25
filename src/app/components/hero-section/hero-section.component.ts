@@ -47,7 +47,7 @@ export class HeroSectionComponent implements AfterViewInit, OnDestroy {
   startSlideTimer() {
     this.slideInterval = setInterval(() => {
       this.nextSlide();
-    }, 5000); // Change every 5 seconds
+    }, 30000); // Change every 5 seconds
   }
 
   clearSlideTimer() {
