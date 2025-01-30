@@ -148,9 +148,14 @@ section {
   &#certifications,
   &#menu {
     background: var(--off-white);
+    .featured-dish {
+      justify-content: center;
+    }
   }
   &#food-truck-app {
-    background-image: url(../../../public/food-truck-background.jpg);
+    background-image: url(../../../public/slider-image-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
