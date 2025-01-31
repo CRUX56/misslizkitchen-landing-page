@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { MenuService } from '../../services';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, MatCardModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css',
 })
