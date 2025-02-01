@@ -137,7 +137,7 @@ section {
     .about-background {
       width: 100%;
       height: auto;
-      background-image: url(../../../public/main-image-1.jpg);
+      background-image: url(../../../public/slider-image-2.jpg);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -150,6 +150,22 @@ section {
     background: var(--off-white);
     .featured-dish {
       justify-content: center;
+      .menu-item {
+        padding: 10px;
+        mat-card {
+          align-content: center;
+          mat-card-content {
+            img {
+              width: 100%;
+              height: auto;
+              border-radius: 5px;
+            }
+            h5 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
     }
   }
   &#food-truck-app {
@@ -175,7 +191,35 @@ section {
 }
 
 footer {
+  display: flex;
   background: var(--navy);
+  .tagline {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 30px;
+    p {
+      font-size: 38px;
+      font-weight: bold;
+      line-height: 40px;
+      color: var(--off-white) !important;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      padding: 56px;
+    }
+  }
+  .footer-menu {
+    padding: 150px 30px;
+    nav {
+      display: flex;
+      flex-direction: column;
+      a {
+        color: var(--off-white);
+        padding: 10px 0 15px 0;
+      }
+    }
+  }
   .copyright {
     display: flex;
     align-items: center;
@@ -184,6 +228,11 @@ footer {
     color: var(--bloodorange);
     a {
       color: var(--crimson);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      :hover {
+        color: var(--crimson);
+      }
     }
   }
 }
