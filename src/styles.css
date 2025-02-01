@@ -126,3 +126,64 @@ Helper Classes
   padding-left: 15px;
   padding-right: 15px;
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .flex-row {
+    flex-direction: column;
+  }
+  [class^="col."] {
+    flex-basis: 100% !important;
+  }
+  .footer > * {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .flex-row {
+    flex-wrap: wrap;
+  }
+  .col-6,
+  .col-5,
+  .col-4 {
+    flex-basis: 50% !important;
+  }
+  .col-3,
+  .col-2,
+  .col-1 {
+    flex-basis: 100% !important;
+  }
+  .footer > * {
+    font-size: 0.85em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 90%;
+    padding: 0 25px;
+  }
+  .col-6 {
+    flex-basis: 50%;
+  }
+  .col-4 {
+    flex-basis: 33.33%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .footer > * {
+    font-size: 0.9em;
+  }
+}
