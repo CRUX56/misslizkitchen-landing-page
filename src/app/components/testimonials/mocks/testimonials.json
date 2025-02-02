@@ -1,32 +1,32 @@
 [
   {
     "name": "John Doe",
-    "image": "https://via.placeholder.com/150",
-    "testimonial": "The food here is fantastic! It completly changed my life!"
+    "image": "/unknown_person.jpg",
+    "testimonial": "Bro it's bussin!!! My Guy.🔥🔥"
   },
   {
     "name": "Jane Smith",
-    "image": "https://via.placeholder.com/150/ff0000",
-    "testimonial": "Amazing service and excellent customer support!"
+    "image": "/unknown_person.jpg",
+    "testimonial": "Good food. Great Service... Thank you much..."
   },
   {
     "name": "Sam Wilson",
-    "image": "https://via.placeholder.com/150/00ff00",
+    "image": "/unknown_person.jpg",
     "testimonial": "Highly recommend this to everyone. Five stars!"
   },
   {
     "name": "Lisa Adams",
-    "image": "https://via.placeholder.com/150/0000ff",
+    "image": "/unknown_person.jpg",
     "testimonial": "Exceptional quality and attention to detail!"
   },
   {
     "name": "Mark Lee",
-    "image": "https://via.placeholder.com/150/ffff00",
+    "image": "/unknown_person.jpg",
     "testimonial": "Great experience all around"
   },
   {
     "name": "Susan Clark",
-    "image": "https://via.placeholder.com/150/ff00ff",
+    "image": "/unknown_person.jpg",
     "testimonial": "Would buy again without hesitation."
   }
 ]

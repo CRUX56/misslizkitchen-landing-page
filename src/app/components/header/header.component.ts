@@ -11,9 +11,15 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  menuOpen = false;
+
   constructor(private viewportScroller: ViewportScroller) {}
 
   scrollToSection(sectionId: string) {
     this.viewportScroller.scrollToAnchor(sectionId);
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 }
