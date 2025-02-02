@@ -251,46 +251,55 @@ footer {
 }
 
 @media (max-width: 360px) {
+  .container {
+    padding: 0 !important;
+  }
   header {
     .menu-toggle {
       display: block;
     }
-  }
+    nav {
+      ul {
+        li {
+          width: 100%;
+        }
+      }
+    }
+    .crux-header-nav {
+      position: absolute;
+      top: 76px;
+      left: 0;
+      width: 100%;
+      background: var(--navy);
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      z-index: 100;
+    }
 
-  .crux-header-nav {
-    position: absolute;
-    top: 76px;
-    left: 0;
-    width: 100%;
-    background: var(--navy);
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    z-index: 100;
-  }
+    .crux-header-nav.open {
+      display: flex;
+    }
 
-  .crux-header-nav.open {
-    display: flex;
-  }
+    .crux-header-nav ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
 
-  .crux-header-nav ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
+    .crux-header-nav a {
+      display: block;
+      padding: 15px;
+      font-size: 18px;
+      color: var(--white);
+      border-bottom: 1px solid var(--transparent-25-percent);
+    }
 
-  .crux-header-nav a {
-    display: block;
-    padding: 15px;
-    font-size: 18px;
-    color: var(--white);
-    border-bottom: 1px solid var(--transparent-25-percent);
-  }
-
-  .crux-header-nav a:hover {
-    background: rgba(255, 255, 255, 0.25);
+    .crux-header-nav a:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
   }
 }
 
