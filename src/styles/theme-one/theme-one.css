@@ -250,11 +250,15 @@ footer {
   }
 }
 
-@media (max-width: 360px) {
-  .container {
-    padding: 0 !important;
+@media screen and (max-width: 360px) {
+  #hero {
+    .container {
+      padding: 0 !important;
+    }
   }
+
   header {
+    /* The header should be redone to be mentioned once in the header and not recalled multiple times*/
     .menu-toggle {
       display: block;
     }
@@ -301,16 +305,89 @@ footer {
       background: rgba(255, 255, 255, 0.25);
     }
   }
+  section {
+    &#about {
+      .content {
+        padding: 102px 25px 120px 25px;
+      }
+    }
+    &#food-truck-app {
+      .full-screen-section {
+        .content {
+          padding: 263px 25px 213px 25px;
+        }
+        .col-6:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    .tagline,
+    .footer-menu {
+      padding: 40px 30px;
+    }
+    section {
+      &#contact-us {
+        padding: 0;
+      }
+    }
+    .copyright {
+      text-align: center;
+    }
+  }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  /* Adjust container width */
+  .container {
+    width: 95%;
+    max-width: 95%;
+  }
+  header {
+    .crux-header-logo img {
+      height: 40px;
+    }
+    .crux-header-nav {
+      position: absolute;
+      top: 76px;
+      left: 0;
+      width: 100%;
+      background: var(--navy);
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      z-index: 100;
+    }
+
+    .crux-header-nav.open {
+      display: flex;
+    }
+
+    .crux-header-nav ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .crux-header-nav a {
+      display: block;
+      padding: 15px;
+      font-size: 18px;
+      color: var(--white);
+      border-bottom: 1px solid var(--transparent-25-percent);
+    }
+
+    .crux-header-nav a:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+  }
 }
 
-@media (max-width: 576px) {
+@media screen and (min-width: 481px) and (max-width: 960px) {
 }
 
-@media (max-width: 768px) {
-}
-
-@media (max-width: 1024px) {
+@media screen and (min-width: 961px) and (max-width: 1024px) {
 }
