@@ -1,91 +1,197 @@
-<div class="container full-width" outlines="0">
-  <div class="flex-row header">
-    <div class="crux-header-logo">
-      <div class="col-2">
-        <a href="#" target="_blank">
-          <img src="/liz-kitchen-logo.png" alt="Site logo" />
-        </a>
+<header>
+  <mat-toolbar class="toolbar">
+    <!--Logo-->
+    <a routerLink="/" class="crux-header-logo">
+      <img src="/liz-kitchen-logo.png" alt="Mis Liz Kitchen" />
+    </a>
+
+    <!-- Hamburger Menu (only visible on smaller screens) -->
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <mat-icon
+        fontIcon="Hamburger"
+        aria-hidden="false"
+        aria-label="Hamburger"
+        >{{ isMenuOpen ? "close" : "menu" }}</mat-icon
+      >
+    </button>
+
+    <!--Navigation-->
+
+    <nav class="crux-header-nav" [ngClass]="{ open: isMenuOpen }">
+      <ul>
+        <li>
+          <a
+            class="button"
+            (click)="scrollToSection('hero')"
+            routerLinkActive="active"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            class="button"
+            (click)="scrollToSection('certifications')"
+            routerLinkActive="active"
+          >
+            Awards
+          </a>
+        </li>
+        <li>
+          <a
+            class="button"
+            (click)="scrollToSection('about')"
+            routerLinkActive="active"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            class="button"
+            (click)="scrollToSection('menu')"
+            routerLinkActive="active"
+          >
+            Menu
+          </a>
+        </li>
+        <li>
+          <a
+            class="button"
+            (click)="scrollToSection('testimonials')"
+            routerLinkActive="active"
+          >
+            Testimonials
+          </a>
+        </li>
+        <li>
+          <a
+            class="button"
+            (click)="scrollToSection('food-truck-app')"
+            routerLinkActive="active"
+          >
+            App Coming Soon
+          </a>
+        </li>
+        <li>
+          <a
+            class="button"
+            (click)="scrollToSection('contact-us')"
+            routerLinkActive="active"
+          >
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="crux-header-widget">
+      <div class="content">
+        <span>
+          <mat-icon
+            aria-hidden="false"
+            aria-label="phone"
+            fontIcon="phone"
+          ></mat-icon>
+        </span>
+        <a href="tel:111+111+1111" target="_blank">111-111-1111</a>
       </div>
     </div>
+  </mat-toolbar>
+</header>
 
-    <!-- Mobile Menu Toggle Button -->
-    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+<!--
+<header>
+  <div class="container full-width" outlines="0">
+    <div class="flex-row header">
+      <div class="crux-header-logo">
+        <div class="col-2">
+          <a href="#" target="_blank">
+            <img src="/liz-kitchen-logo.png" alt="Site logo" />
+          </a>
+        </div>
+      </div>
 
-    <div class="col-8">
-      <nav class="crux-header-nav" [class.open]="menuOpen">
-        <ul>
-          <li>
-            <a
-              class="button"
-              (click)="scrollToSection('hero'); toggleMenu()"
-              routerLinkActive="active"
-              >Home
-            </a>
-          </li>
-          <li>
-            <a
-              class="button"
-              (click)="scrollToSection('about'); toggleMenu()"
-              routerLinkActive="active"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              class="button"
-              (click)="scrollToSection('certifications'); toggleMenu()"
-              routerLinkActive="active"
-              >Certifications</a
-            >
-          </li>
-          <li>
-            <a
-              class="button"
-              (click)="scrollToSection('menu'); toggleMenu()"
-              routerLinkActive="active"
-              >Menu</a
-            >
-          </li>
-          <li>
-            <a
-              class="button"
-              (click)="scrollToSection('food-truck-app'); toggleMenu()"
-              routerLinkActive="active"
-              >App Coming Soon</a
-            >
-          </li>
-          <li>
-            <a
-              class="button"
-              (click)="scrollToSection('testimonials'); toggleMenu()"
-              routerLinkActive="active"
-              >testimonials</a
-            >
-          </li>
-          <li>
-            <a
-              class="button"
-              (click)="scrollToSection('contact-us'); toggleMenu()"
-              routerLinkActive="active"
-              >Contact Us</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="crux-header-widget">
-      <div class="col-12">
-        <div class="content">
-          <span>
-            <mat-icon
-              aria-hidden="false"
-              aria-label="phone"
-              fontIcon="phone"
-            ></mat-icon>
-          </span>
-          <a href="tel:111+111+1111" target="_blank">111-111-1111</a>
+      <!-- Mobile Menu Toggle Button
+      <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+      <div class="col-8">
+        <nav class="crux-header-nav" [class.open]="menuOpen">
+          <ul>
+            <li>
+              <a
+                class="button"
+                (click)="scrollToSection('hero'); toggleMenu()"
+                routerLinkActive="active"
+                >Home
+              </a>
+            </li>
+            <li>
+              <a
+                class="button"
+                (click)="scrollToSection('about'); toggleMenu()"
+                routerLinkActive="active"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="button"
+                (click)="scrollToSection('certifications'); toggleMenu()"
+                routerLinkActive="active"
+                >Certifications</a
+              >
+            </li>
+            <li>
+              <a
+                class="button"
+                (click)="scrollToSection('menu'); toggleMenu()"
+                routerLinkActive="active"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                class="button"
+                (click)="scrollToSection('food-truck-app'); toggleMenu()"
+                routerLinkActive="active"
+                >App Coming Soon</a
+              >
+            </li>
+            <li>
+              <a
+                class="button"
+                (click)="scrollToSection('testimonials'); toggleMenu()"
+                routerLinkActive="active"
+                >testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                class="button"
+                (click)="scrollToSection('contact-us'); toggleMenu()"
+                routerLinkActive="active"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="crux-header-widget">
+        <div class="col-12">
+          <div class="content">
+            <span>
+              <mat-icon
+                aria-hidden="false"
+                aria-label="phone"
+                fontIcon="phone"
+              ></mat-icon>
+            </span>
+            <a href="tel:111+111+1111" target="_blank">111-111-1111</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</header>
+
+-->
