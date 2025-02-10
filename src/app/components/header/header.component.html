@@ -7,17 +7,12 @@
 
     <!-- Hamburger Menu (only visible on smaller screens) -->
     <button class="menu-toggle" (click)="toggleMenu()">
-      <mat-icon
-        fontIcon="Hamburger"
-        aria-hidden="false"
-        aria-label="Hamburger"
-        >{{ isMenuOpen ? "close" : "menu" }}</mat-icon
-      >
+      <mat-icon>{{ isMenuOpen ? "close" : "menu" }}</mat-icon>
     </button>
 
     <!--Navigation-->
 
-    <nav class="crux-header-nav" [ngClass]="{ open: isMenuOpen }">
+    <nav [class.crux-header-nav]="true" [class.open]="isMenuOpen">
       <ul>
         <li>
           <a
