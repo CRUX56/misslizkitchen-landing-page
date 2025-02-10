@@ -50,6 +50,7 @@ header {
   .mat-toolbar-single-row {
     background: var(--transparent);
     justify-content: space-between;
+    flex-wrap: wrap;
     .crux-header-logo {
       display: inline-flex;
       align-items: center;
@@ -258,8 +259,12 @@ footer {
   }
 
   header {
+    height: 64px;
     /* The header should be redone to be mentioned once in the header and not recalled multiple times*/
     .mat-toolbar-single-row {
+      .crux-header-logo {
+        justify-content: left;
+      }
       .menu-toggle {
         display: block;
       }
@@ -272,7 +277,7 @@ footer {
       }
       .crux-header-nav {
         position: absolute;
-        top: 76px;
+        top: 63px;
         left: 0;
         width: 100%;
         background: var(--navy);
