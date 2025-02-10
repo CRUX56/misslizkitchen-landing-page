@@ -347,54 +347,321 @@ footer {
 
 @media screen and (min-width: 361px) and (max-width: 480px) {
   /* Adjust container width */
-  .container {
-    width: 95%;
-    max-width: 95%;
+  #hero {
+    .container {
+      padding: 0 !important;
+    }
   }
   header {
-    .crux-header-logo img {
-      height: 40px;
+    height: 64px;
+    .mat-toolbar-single-row {
+      flex-flow: column;
+      .crux-header-logo {
+        justify-content: left;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .crux-header-nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        z-index: 100;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          li {
+            width: 100%;
+            a {
+              display: block;
+              padding: 15px;
+              font-size: 18px;
+              color: var(--white);
+              border-bottom: 1px solid var(--transparent-25-percent);
+              a:hover {
+                background: rgba(255, 255, 255, 0.25);
+              }
+            }
+          }
+        }
+      }
+
+      .crux-header-nav.open {
+        display: flex;
+      }
     }
-    .crux-header-nav {
-      position: absolute;
-      top: 76px;
-      left: 0;
-      width: 100%;
-      background: var(--navy);
-      display: none;
-      flex-direction: column;
+  }
+  section {
+    &#about {
+      .content {
+        padding: 102px 25px 120px 25px;
+      }
+    }
+    &#menu {
+      .featured-dish {
+        .menu-item {
+          padding: 10%;
+        }
+      }
+    }
+    &#food-truck-app {
+      .full-screen-section {
+        .content {
+          padding: 85% 25px 25% 25px;
+        }
+        .col-6:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    .tagline,
+    .footer-menu {
+      padding: 10% 5%;
+    }
+    section {
+      &#contact-us {
+        padding: 0;
+      }
+    }
+    .copyright {
       text-align: center;
-      z-index: 100;
-    }
-
-    .crux-header-nav.open {
-      display: flex;
-    }
-
-    .crux-header-nav ul {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-
-    .crux-header-nav a {
-      display: block;
-      padding: 15px;
-      font-size: 18px;
-      color: var(--white);
-      border-bottom: 1px solid var(--transparent-25-percent);
-    }
-
-    .crux-header-nav a:hover {
-      background: rgba(255, 255, 255, 0.25);
     }
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 960px) {
+  #hero {
+    .container {
+      padding: 0 !important;
+    }
+  }
+  header {
+    height: 64px;
+    .mat-toolbar-single-row {
+      flex-flow: column;
+      .crux-header-logo {
+        justify-content: left;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .crux-header-nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        z-index: 100;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          li {
+            width: 100%;
+            a {
+              display: block;
+              padding: 15px;
+              font-size: 18px;
+              color: var(--white);
+              border-bottom: 1px solid var(--transparent-25-percent);
+              a:hover {
+                background: rgba(255, 255, 255, 0.25);
+              }
+            }
+          }
+        }
+      }
+
+      .crux-header-nav.open {
+        display: flex;
+      }
+    }
+  }
+  section {
+    &#about {
+      .content {
+        padding: 102px 25px 120px 25px;
+      }
+    }
+    &#menu {
+      .featured-dish {
+        .menu-item {
+          padding: 10%;
+        }
+      }
+    }
+    &#food-truck-app {
+      .full-screen-section {
+        .content {
+          padding: 85% 25px 25% 25px;
+        }
+        .col-6:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    .tagline,
+    .footer-menu {
+      padding: 10% 5%;
+    }
+    section {
+      &#contact-us {
+        padding: 0;
+      }
+    }
+    .copyright {
+      text-align: center;
+    }
+  }
 }
 
-@media screen and (min-width: 961px) and (max-width: 1024px) {
+@media screen and (min-width: 961px) and (max-width: 1440px) {
+  #hero {
+    .container {
+      padding: 0 !important;
+    }
+  }
+  header {
+    height: 64px;
+    .mat-toolbar-single-row {
+      flex-flow: column;
+      .crux-header-logo {
+        justify-content: left;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .crux-header-nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        z-index: 100;
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          li {
+            width: 100%;
+            a {
+              display: block;
+              padding: 15px;
+              font-size: 18px;
+              color: var(--white);
+              border-bottom: 1px solid var(--transparent-25-percent);
+              a:hover {
+                background: rgba(255, 255, 255, 0.25);
+              }
+            }
+          }
+        }
+      }
+
+      .crux-header-nav.open {
+        display: flex;
+      }
+    }
+  }
+  section {
+    &#about {
+      .container {
+        padding: 0;
+        .content {
+          padding: 102px 25px 120px 25px;
+        }
+      }
+    }
+    &#menu {
+      .featured-dish {
+        .menu-item {
+          padding: 1%;
+        }
+      }
+    }
+    &#food-truck-app {
+      .full-screen-section {
+        .content {
+          padding: 40% 25px 25% 25px;
+        }
+        .col-6:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    .tagline,
+    .footer-menu {
+      padding: 10% 5%;
+    }
+    section {
+      &#contact-us {
+        padding: 0;
+      }
+    }
+    .copyright {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  header {
+    height: 20%;
+    .mat-toolbar-single-row {
+      flex-flow: wrap;
+      .crux-header-logo {
+        justify-content: center;
+      }
+      .menu-toggle {
+        display: none;
+      }
+      .crux-header-nav {
+        display: flex;
+        position: inherit;
+        width: auto;
+        background: var(--transparent);
+        ul {
+          flex-direction: row;
+          li {
+            a {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    section {
+      &#contact-us {
+        .contact-form {
+          margin: 20px 20px;
+        }
+      }
+    }
+  }
 }
