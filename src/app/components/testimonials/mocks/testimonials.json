@@ -12,21 +12,16 @@
   {
     "name": "Sam Wilson",
     "image": "/unknown_person.jpg",
-    "testimonial": "Highly recommend this to everyone. Five stars!"
+    "testimonial": "Hands down, the best food truck in Charlotte! The ribs are out of this world."
   },
   {
     "name": "Lisa Adams",
     "image": "/unknown_person.jpg",
-    "testimonial": "Exceptional quality and attention to detail!"
+    "testimonial": "Liz Kitchen is my go-to for comfort food. Their mac & cheese is a must-try!"
   },
   {
     "name": "Mark Lee",
     "image": "/unknown_person.jpg",
-    "testimonial": "Great experience all around"
-  },
-  {
-    "name": "Susan Clark",
-    "image": "/unknown_person.jpg",
-    "testimonial": "Would buy again without hesitation."
+    "testimonial": "The flavors are amazing, and the portions are huge. Highly recommend!"
   }
 ]

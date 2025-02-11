@@ -1,15 +1,15 @@
 [
   {
     "image": "/slider-image-1.jpg",
-    "title": "Slide 1 Title",
-    "description": "This is the description for Slide 1.",
+    "title": "Where Flavor Meets Soul",
+    "description": "Savor the best in soul food, seafood, and BBQ—made with love and served fresh daily in Charlotte, NC.",
     "buttonText": "Learn More",
     "buttonAction": "() => alert('Slide 1 Buutton clicked')"
   },
   {
     "image": "/slider-image-2.jpg",
-    "title": "Slide 2 Title",
-    "description": "This is the description for Slide 2.",
+    "title": "Bringing Charlotte Together, One Plate at a Time",
+    "description": "From crispy wings to smoky ribs, we’re serving up comfort food that keeps you coming back for more.",
     "buttonText": "Read More",
     "buttonAction": "() => alert('Slide 2 Button Clicked!')"
   }
