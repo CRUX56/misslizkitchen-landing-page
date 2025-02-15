@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContactFormService {
-  //private apiUrl = 'http://localhost:4200/send-email';
+  private apiUrl = 'http://localhost:5000/send-email';
 
   constructor(private http: HttpClient) {}
 
-  sendEmail(formData: { name: string; email: string; message: string }) {
-    return this.http.post('http://localhost:3000/send-email', formData);
+  sendEmail(formData: { to: string; subject: string; message: string }) {
+    return this.http.post(this.apiUrl, formData);
   }
 }
